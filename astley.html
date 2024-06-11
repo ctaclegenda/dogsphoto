@@ -1,87 +1,55 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Топ 10 видео с песнями Rick Astley</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 20px;
-    }
+    <meta charset="UTF-8">
+    <title>Rickroll!</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: sans-serif;
+        }
 
-    .container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
+        #rickroll-container {
+            position: relative;
+            width: 50%;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
 
-    .video-item {
-      width: 300px;
-      margin: 10px;
-      border: 1px solid #ccc;
-      padding: 10px;
-    }
+        #rickroll-video {
+            width: 100%;
+            height: auto;
+        }
 
-    .video-item iframe {
-      width: 100%;
-      height: 200px;
-    }
-
-    .video-item h3 {
-      margin-top: 10px;
-      font-size: 16px;
-    }
-  </style>
+        #rickroll-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-  <h1>Топ 10 видео с песнями Rick Astley</h1>
+    <h1>Click the button to get Rickrolled!</h1>
 
-  <div class="container">
-    <div class="video-item">
-      <iframe src="https://www.youtube.com/watch?v=dQw4w9WgXcQ" title="Rick Astley - Never Gonna Give You Up (Official Music Video)" allowfullscreen></iframe>
-      <h3>Rick Astley - Never Gonna Give You Up (Official Music Video)</h3>
+    <div id="rickroll-container">
+        <iframe id="rickroll-video" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Rick Astley - Never Gonna Give You Up" frameborder="0" allowfullscreen></iframe>
     </div>
 
-    <div class="video-item">
-      <iframe src="https://www.youtube.com/watch?v=E9de-cmycx8" title="Rick Astley - Together Forever" allowfullscreen></iframe>
-      <h3>Rick Astley - Together Forever</h3>
-    </div>
+    <button id="rickroll-button">Click Me!</button>
 
-    <div class="video-item">
-      <iframe src="https://www.youtube.com/watch?v=BeyEGebJ1l4" title="Rick Astley - Whenever You Need Somebody" allowfullscreen></iframe>
-      <h3>Rick Astley - Whenever You Need Somebody</h3>
-    </div>
+    <script>
+        const rickrollButton = document.getElementById('rickroll-button');
+        const rickrollVideo = document.getElementById('rickroll-video');
 
-    <div class="video-item">
-      <iframe src="https://www.youtube.com/watch?v=C2xel6q0yao" title="Rick Astley - She's the Beauty" allowfullscreen></iframe>
-      <h3>Rick Astley - She's the Beauty</h3>
-    </div>
-
-    <div class="video-item">
-      <iframe src="https://www.youtube.com/watch?v=C2xel6q0yao" title="Rick Astley - Cry For Me" allowfullscreen></iframe>
-      <h3>Rick Astley - Cry For Me</h3>
-    </div>
-
-    <div class="video-item">
-      <iframe src="https://www.youtube.com/watch?v=VBssFzSx6sI" title="Rick Astley - My Heart Beats Like a Drum" allowfullscreen></iframe>
-      <h3>Rick Astley - My Heart Beats Like a Drum</h3>
-    </div>
-
-    <div class="video-item">
-      <iframe src="https://www.youtube.com/watch?v=Aqc3VTpz9HQ" title="Rick Astley - You Give Love a Bad Name" allowfullscreen></iframe>
-      <h3>Rick Astley - You Give Love a Bad Name</h3>
-    </div>
-
-    <div class="video-item">
-      <iframe src="https://www.youtube.com/watch?v=dQw4w9WgXcQ" title="Rick Astley - Holding Onto Nothing" allowfullscreen></iframe>
-      <h3>Rick Astley - Holding Onto Nothing</h3>
-    </div>
-
-    <div class="video-item">
-      <iframe src="https://www.youtube.com/watch?v=AC3Ejf7vPEY" title="Rick Astley - Keep Singing" allowfullscreen></iframe>
-      <h3>Rick Astley - Keep Singing</h3>
-    </div>
-
-    <div class="video-item">
-      <iframe src="https://www.youtube.com/watch?v=BeyEGebJ1l4" title="Rick Astley - The Ones Who Walk Away" allowfullscreen></
+        rickrollButton.addEventListener('click', () => {
+            rickrollVideo.play();
+        });
+    </script>
+</body>
+</html>
